@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Grid, Box, TextField } from "@material-ui/core";
 import UserCard from "./userCard";
+import ButtonComponent from "./button";
 
 const UserList = ({ posts }) => {
   const [search, setSearch] = useState("");
@@ -32,6 +33,9 @@ const UserList = ({ posts }) => {
           </Grid>
         ))}
       </Grid>
+      <Box mb={3}>
+        <ButtonComponent />
+      </Box>
     </>
   );
 };
