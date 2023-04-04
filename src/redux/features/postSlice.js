@@ -1,10 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { axiosInstance } from "../../api/api";
 
-const API_BASE_URL = "https://jsonplaceholder.typicode.com";
-const axiosInstance = axios.create({
-  baseURL: API_BASE_URL,
-});
 axiosInstance.interceptors.response.use(
   (response) => response,
   (error) => {
