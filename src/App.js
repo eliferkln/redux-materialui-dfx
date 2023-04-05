@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers } from "./redux/features/postSlice";
-import UserList from "./components/userList";
+import UserList from "./components/userList/userList";
 
 function App() {
   const { posts, loading } = useSelector((state) => state.post);

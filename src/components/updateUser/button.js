@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Button from "@material-ui/core/Button";
-import { axiosInstance } from "../api/api";
+import { axiosInstance } from "../../api/api";
 import { ToastContainer } from "react-toastify";
 
 const handlePutRequest = () => {

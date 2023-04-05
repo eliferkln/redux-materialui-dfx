@@ -2,14 +2,6 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { axiosInstance } from "../../api/api";
 
-axiosInstance.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    console.error("Axios error:", error);
-    return Promise.reject(error);
-  }
-);
-
 export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
   try {
     const response = await axiosInstance.get("/users", {
